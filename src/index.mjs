@@ -8,12 +8,12 @@ try {
   const socket = new WebSocket(url);
 
   // Connection opened
-  socket.addEventListener('open', function (event) {
+  socket.addEventListener('open', (event)=> {
     socket.send('Hello from client!');
   });
 
   // Listen for messages
-  socket.addEventListener('message', function (event) {
+  socket.addEventListener('message',(event) =>{
     data.innerText = 'Message from server : ' + event.data;
   })
 } 
