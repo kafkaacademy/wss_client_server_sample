@@ -1,7 +1,7 @@
 const port = process.env.PORT
 const url = `wss://localhost:${port}`;
 
-//const data = document.body.appendChild(document.createElement('error'));
+const error = document.body.appendChild(document.createElement('div'));
 const data = document.body.appendChild(document.createElement('div'));
 data.id = "data"
 try {
@@ -14,8 +14,9 @@ try {
 
   // Listen for messages
   socket.addEventListener('message', function (event) {
-    document.getElementById('data').innerText = 'Message from server : ' + event.data;
+    data.innerText = 'Message from server : ' + event.data;
   })
-} catch (e) {
-  console.log("error" + e)
+} 
+catch (e) {
+  error.innerText="error" + e;
 }
