@@ -16,7 +16,7 @@ try {
 
   // Listen for messages
   socket.onmessage=(event) =>{
-    data.innerText +=  event.data;
+    data.innerHTML += "<h1>"+ event.data+"</h1>"
   }
 } 
 catch (e) {
