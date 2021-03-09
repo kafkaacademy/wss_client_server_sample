@@ -4,9 +4,8 @@
   "description": "",
   "main": "./src/index.mjs",
   "scripts": {
-    "server": "nodemon ./server.mjs",
-    "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "nodemon ./server.mjs",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
