@@ -1,8 +1,8 @@
-const port = process.env.PORT
-const url = `wss://localhost:${port}`;
+const protocolPrefix = (window.location.protocol === 'https:') ? 'wss:' : 'ws:';
+const url = protocolPrefix + "//" + window.location.hostname + ":" + process.env.PORT
 
 const error = document.body.appendChild(document.createElement('div'));
-error.innerText='no error'
+error.innerText='using '+url
 const data = document.body.appendChild(document.createElement('div'));
 data.innerText="message from server: "
 
