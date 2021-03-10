@@ -18,7 +18,7 @@ module.exports = {
 
     plugins: [
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-        new HtmlWebpackPlugin({ title: 'Auth0 LoginButton Demo' }),       
+        new HtmlWebpackPlugin({ title: 'https/wss demo' }),       
         new Dotenv()
     ],
     output: {
