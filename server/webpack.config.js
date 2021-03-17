@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -10,7 +11,10 @@ module.exports = {
     },
 
     devServer: {
-        https: true,
+        https: {
+            key: fs.readFileSync('../server/cert/key.pem'),
+           cert: fs.readFileSync('../server/cert/cert.pem'),
+          },
         port: 8080
     },
     devtool: 'inline-source-map',
